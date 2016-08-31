@@ -5,6 +5,35 @@ In EC2: ping self:
 curl http://169.254.169.254/latest/meta-data/iam/security-credentials/Rolename
 ```
 
+######15 Delegating Access to Resources in Another AWS Account
+02:21
+create role-> select role type->Role for cross-account access
+
+######17
+######18 Creating an aws managed active directory
+security and identity->Directory service->Create MicroSoft AD  
+Directory DNS : ke.com  
+NetBIOS name: ke  
+2:50  
+create access URL , countinue
+
+######19 Launching an EC2 Instance
+00:40  
+create EC2 ,win2012->step3->Domain join directory.(choose we created)  
+role select we will create.  
+create role->AWS service roles->Amazon EC2 Role for simple systems manager->select->AmzEC2RoleForSSM->next step  
+2:00
+Advanced details,create ps1:
+```
+<powershell>
+Install-WindowsFeature rsat-adds -IncludeManagementTools
+</powershell>
+```
+######20 Setting up Federated Access
+
+
+
+
 ######24 Protecting data in S3
 server-side encryption
 - s3 managed keys
