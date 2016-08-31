@@ -4,7 +4,14 @@ In EC2: ping self:
 ```
 curl http://169.254.169.254/latest/meta-data/iam/security-credentials/Rolename
 ```
-
+######7 Following the principle of least privilege
+```
+"Condition":{
+  "IpAddress":{
+    "aws:SourceIp":"1.2.3.4/32"
+  }
+}
+```
 ######15 Delegating Access to Resources in Another AWS Account
 02:21
 create role-> select role type->Role for cross-account access
@@ -30,6 +37,12 @@ Install-WindowsFeature rsat-adds -IncludeManagementTools
 </powershell>
 ```
 ######20 Setting up Federated Access
+after connection to win2012, go to control panel->administrative tools->active directory users and computers  
+shift rc,run as different user
+(tbc 4:00)
+
+######21 Web Identity Federation
+
 
 
 
@@ -61,7 +74,8 @@ physical access control
 - SOC1 SOC2
 - PCI DSS
 - ISO 27001
-- FedRAMP
+- FedRAMP  
+
 ######33 Securing IT resource
 - Hardware VPN
 - AWS direct connect
